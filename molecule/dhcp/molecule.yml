@@ -8,6 +8,9 @@ platforms:
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:rw
     privileged: true
+    command: /sbin/init
+    capabilities:
+      - NET_ADMIN
     cgroupns_mode: host
 
 provisioner:
