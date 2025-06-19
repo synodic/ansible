@@ -85,14 +85,14 @@ update = ["--update-all"]
 source = "scm"
 
 [tool.pdm.scripts]
-analyze = {cmd = "ruff check tests"}
-ansible-lint = {cmd = "ansible-lint"}
-format = {cmd = "ruff format"}
+analyze = "ruff check tests"
+ansible-lint = "ansible-lint"
+format = "ruff format"
 lint = {composite = ["analyze", "format", "type-check", "ansible-lint"]}
-test = {composite = ["test-pytest"]}
-test-molecule = {cmd = "molecule test --all"}
-test-pytest = {cmd = "pytest --verbose tests"}
-type-check = {cmd = "mypy ."}
+test = "pytest --verbose tests"
+test-integration = "pytest --verbose tests/integration"
+test-unit = "pytest --verbose tests/unit"
+type-check = "mypy ."
 
 [tool.pdm]
 distribution = false # We publish this to Galaxy, not PyPI
