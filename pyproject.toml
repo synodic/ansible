@@ -3,10 +3,10 @@ authors = [
   {name = "Asher Norland", email = "asher.norland@gmail.com"},
 ] 
 dependencies = [
-  "ansible", # Full ansible for vscode extension
-  "ansible-vault",
-  "pydantic",
-  "pyyaml",
+  "ansible-dev-tools>=25.5.2",
+  "ansible-vault>=4.1.0",
+  "pydantic>=2.11.7",
+  "pyyaml>=6.0.2",
 ] 
 description = "Synodic monorepo for Ansible roles" 
 license = {text = "MIT"} 
@@ -17,17 +17,15 @@ version = "0.1.0"
 
 [dependency-groups]
 lint = [
-  "ansible-lint",
-  "ruff",
-  "mypy",
+  "ruff>=0.12.0",
+  "mypy>=1.16.1",
 ]
 test = [
-  "dnspython",
-  "molecule",
-  "pytest",
-  "pytest-mock",
-  "pytest-ansible",
-  "molecule-plugins[docker]",
+  "dnspython>=2.7.0",
+  "molecule>=25.6.0",
+  "pytest>=8.4.1",
+  "pytest-mock>=3.14.1",
+  "molecule-plugins[docker]>=23.7.0",
 ]
 
 [tool.pytest.ini_options]
