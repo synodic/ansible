@@ -11,3 +11,5 @@ dependencies: {}
 repository: https://github.com/synodic/ansible-core
 issues: https://github.com/synodic/ansible-core/issues
 build_ignore: [tests]
+tags:
+  - infrastructure
