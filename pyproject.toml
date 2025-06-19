@@ -97,4 +97,4 @@ test-pytest = {cmd = "pytest --verbose tests"}
 type-check = {cmd = "mypy ."}
 
 [tool.pdm]
-distribution = false
+distribution = false # We publish this to Galaxy, not PyPI
