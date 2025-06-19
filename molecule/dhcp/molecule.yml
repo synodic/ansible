@@ -18,7 +18,7 @@ provisioner:
     name: ansible-lint
   config_options:
     defaults:
-      stdout_callback: yaml
+      callback_result_format: json
 
 verifier:
   name: ansible
