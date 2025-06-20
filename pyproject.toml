@@ -32,6 +32,7 @@ test = [
 
 [tool.pytest.ini_options]
 log_cli = true
+addopts = "-v"
 markers = [
   "setup: Tests that should be run prior to any automation, verifying static IP setup",
 ]
@@ -91,9 +92,9 @@ analyze = "ruff check tests"
 ansible-lint = "ansible-lint"
 format = "ruff format"
 lint = {composite = ["analyze", "format", "type-check", "ansible-lint"]}
-test = "pytest --verbose tests"
-test-integration = "pytest --verbose tests/integration"
-test-unit = "pytest --verbose tests/unit"
+test = "pytest tests"
+test-integration = "pytest tests/integration"
+test-unit = "pytest tests/unit"
 type-check = "mypy ."
 
 [tool.pdm]
